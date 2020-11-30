@@ -4,10 +4,10 @@ var User= require("../../Models/users")
 
 /* GET users listing. */
 router.get('/register', function(req, res, next) {
-  res.render('users/register');
+  res.render('Users/register');
 });
 router.get('/login', function(req, res, next) {
-  res.render('users/login');
+  res.render('Users/login');
 });
 router.get('/logout', function(req, res, next) {
   req.session.user=null;
