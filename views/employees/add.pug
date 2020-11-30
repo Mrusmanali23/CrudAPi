@@ -1,0 +1,18 @@
+extend ../layout
+
+block content 
+    h1 Add new employee
+    form(action="/employees/add", method="post")
+        .form-group
+            label(for='name') Name
+            input#name(type='text', class='form-control' , name="Name" )
+        .form-group
+            label(for='email') Email
+            input#Email(type='text', class='form-control', name="Email")
+        .form-group
+            label(for='addr') Address
+            input#address(type='text', class='form-control' , name="Address")
+        .form-group
+            label(for='phone') Phone#
+            input#phone(type='number', class='form-control', name="Phone")
+        input(type="submit" , class="btn btn-info" )

@@ -1,0 +1,41 @@
+extend ../layout
+
+block content 
+    .row
+        .col-sm-8
+             h1= Name
+        .col-sm-4
+            a(href="/employees/add", style="margin:2px" class="btn btn-success") Add Employee
+            a(href="/employees/delete", style="margin:2px" class="btn btn-danger") Delete Employee
+   
+
+    table.table
+        thead
+            tr
+                th Name
+                th Email
+                th Address
+                th phone 
+                th Actions
+        tbody
+            each employee in employees
+                tr
+                    td=employee.Name
+                    td=employee.Email
+                    td=employee.Address                   
+                    td=employee.Phone
+                    td
+                        
+                        a(href="/employees/edit/"+employee._id class="  btn btn-info" ) 
+                            i.fa.fa-edit(aria-hidden='true')                        
+                        a(href="/employees/delete/"+employee._id class="btn btn-danger") 
+                            i.fa.fa-trash(aria-hidden='true')
+                                
+                       
+						
+						
+						
+						 
+						
+
+

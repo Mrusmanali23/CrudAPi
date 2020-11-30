@@ -1,0 +1,18 @@
+extend ../layout
+
+block content 
+    h1 Edit employee
+    form(action="/employees/edit/"+emp._id, method="post")
+        .form-group
+            label(for='name') Name
+            input#name(type='text', class='form-control' , name="Name" ,value=emp.Name )
+        .form-group
+            label(for='email') Email
+            input#Email(type='text', class='form-control', name="Email" ,value=emp.Email)
+        .form-group
+            label(for='addr') Address
+            input#address(type='text', class='form-control' , name="Address" ,value=emp.Address)
+        .form-group
+            label(for='phone') Phone#
+            input#phone(type='number', class='form-control', name="Phone" value=emp.Phone)
+        input(type="submit" , class="btn btn-info" )
